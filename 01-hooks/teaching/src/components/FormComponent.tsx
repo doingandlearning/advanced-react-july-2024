@@ -1,27 +1,73 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
+
+// initialState
+const initialState = {
+	username: '',
+	email: '',
+	password: '',
+	confirmPassword: '',
+	errors: {}
+}
+
+interface Action {
+	type: string
+	field?: keyof typeof initialState
+	error?: string
+	value?: string
+}
+
+// reducer
+function reducer(state, action: Action) {
+	switch (action.type) {
+		case 'updateField':
+			return {
+				...state,
+				[action.field]: action.value
+			}
+		case 'setError':
+			return {
+				...state,
+				errors: {
+					...state.errors,
+					[action.field]: action.error
+				}
+			}
+		case 'clearErrors':
+			return {
+				...state,
+				errors: {}
+			}
+		case 'clearForm':
+			return initialState
+		default:
+			throw new Error("Unknown action type")
+	}
+}
+
 
 function FormComponent() {
-	const [username, setUsername] = useState('');
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmPassword] = useState('');
-	const [errors, setErrors] = useState({});
+	const [state, dispatch] = useReducer(reducer, initialState)
 
 	const handleChange = (e) => {
-		const { name, value } = e.target;
-		if (name === 'username') setUsername(value);
-		if (name === 'email') setEmail(value);
-		if (name === 'password') setPassword(value);
-		if (name === 'confirmPassword') setConfirmPassword(value);
+		dispatch({
+			type: 'updateField',
+			field: e.target.name,
+			value: e.target.value
+		})
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (password !== confirmPassword) {
-			setErrors({ confirmPassword: 'Passwords do not match' });
+		if (state.password !== state.confirmPassword) {
+			dispatch({
+				type: 'setError',
+				field: 'confirmPassword',
+				error: 'Passwords do not match.'
+			})
 		} else {
-			setErrors({});
-			console.log('Form submitted', { username, email, password, confirmPassword });
+			dispatch({ type: 'clearErrors' })
+			console.log('Form submitted', state);
+			dispatch({ type: 'clearForm' })
 		}
 	};
 
@@ -32,7 +78,7 @@ function FormComponent() {
 				<input
 					type="text"
 					name="username"
-					value={username}
+					value={state.username}
 					onChange={handleChange}
 				/>
 			</div>
@@ -41,7 +87,7 @@ function FormComponent() {
 				<input
 					type="email"
 					name="email"
-					value={email}
+					value={state.email}
 					onChange={handleChange}
 				/>
 			</div>
@@ -50,7 +96,7 @@ function FormComponent() {
 				<input
 					type="password"
 					name="password"
-					value={password}
+					value={state.password}
 					onChange={handleChange}
 				/>
 			</div>
@@ -59,11 +105,11 @@ function FormComponent() {
 				<input
 					type="password"
 					name="confirmPassword"
-					value={confirmPassword}
+					value={state.confirmPassword}
 					onChange={handleChange}
 				/>
-				{errors.confirmPassword && (
-					<p style={{ color: 'red' }}>{errors.confirmPassword}</p>
+				{state.errors.confirmPassword && (
+					<p style={{ color: 'red' }}>{state.errors.confirmPassword}</p>
 				)}
 			</div>
 			<button type="submit">Submit</button>
