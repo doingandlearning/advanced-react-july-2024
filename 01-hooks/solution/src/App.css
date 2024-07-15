@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.input-container {
+  display: flex;
+  justify-items: center;
+}
+
+.input-container button {
+  width: 30%;
+}
+
+.input-container input {
+  margin: auto;
+  margin-right: 8px;
+}

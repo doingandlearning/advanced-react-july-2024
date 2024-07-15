@@ -19,10 +19,10 @@ function TaskInput() {
 	};
 
 	return (
-		<>
+		<div className="input-container">
 			<input ref={inputRef} type="text" placeholder="Enter a task" />
 			<button onClick={handleAddTask}>Add Task</button>
-		</>
+		</div>
 	);
 }
 
