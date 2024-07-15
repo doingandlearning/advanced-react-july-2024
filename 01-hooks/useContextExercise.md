@@ -6,8 +6,8 @@ In this exercise, you will create a `ThemeContext` to manage the theme (light or
 
 #### Step 1: Create the Theme Context
 
-1. **Create `ThemeContext.js`**:
-   - Create a new file named `ThemeContext.js`.
+1. **Create `ThemeContext.tsx`**:
+   - Create a new file named `ThemeContext.tsx`.
    - Define the context, provider, and the reducer to manage the theme state.
 
 ```jsx
@@ -42,8 +42,8 @@ export { ThemeContext, ThemeProvider };
 
 #### Step 2: Create the Theme Switch Component
 
-1. **Create `ThemeSwitch.js`**:
-   - Create a new file named `ThemeSwitch.js`.
+1. **Create `ThemeSwitch.tsx`**:
+   - Create a new file named `ThemeSwitch.tsx`.
    - Implement a switch that toggles the theme between light and dark modes.
 
 ```jsx
@@ -70,7 +70,7 @@ export default ThemeSwitch;
 
 #### Step 3: Use the Theme Context in a Component
 
-1. **Update `Navbar.js`**:
+1. **Update `Navbar.tsx`**:
    - Use the theme context to change the appearance of the Navbar based on the current theme.
 
 ```jsx
@@ -99,11 +99,11 @@ export default Navbar;
 
 #### Step 4: Wrap the Application with the Theme Provider
 
-1. **Update `App.js`**:
+1. **Update `App.tsx`**:
    - Wrap the application with the `ThemeProvider` to provide the theme context to all components.
 
 ```jsx
-// src/App.js
+// src/App.tsx
 import React from "react";
 import "./App.css";
 import TaskManager from "./components/TaskManager";
@@ -126,19 +126,19 @@ export default App;
 
 ### Summary of Steps
 
-1. **Create `ThemeContext.js`**:
+1. **Create `ThemeContext.tsx`**:
 
    - Define the context, reducer, and provider for managing the theme state.
 
-2. **Create `ThemeSwitch.js`**:
+2. **Create `ThemeSwitch.tsx`**:
 
    - Implement a switch component to toggle between light and dark modes.
 
-3. **Update `Navbar.js`**:
+3. **Update `Navbar.tsx`**:
 
    - Use the theme context to apply styles based on the current theme.
 
-4. **Update `App.js`**:
+4. **Update `App.tsx`**:
    - Wrap the application with the `ThemeProvider` to provide the theme context to all components.
 
 ### Reflection Questions
