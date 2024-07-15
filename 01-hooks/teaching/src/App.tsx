@@ -1,11 +1,11 @@
 import './App.css'
-import InputComponent from "./components/InputComponent.tsx"
+import FormComponent from './components/FormComponent.tsx'
 
 function App() {
 
   return (
     <>
-      <InputComponent />
+      <FormComponent />
     </>
   )
 }
