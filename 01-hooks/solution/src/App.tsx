@@ -5,13 +5,14 @@ import TaskInput from './components/TaskInput'
 import TaskManager from './components/TaskManager'
 import Navbar from './components/Navbar'
 import { TaskProvider } from './context/TaskContext'
-
 function App() {
   return (
-    <TaskProvider>
-      <Navbar />
-      <TaskManager />
-    </TaskProvider>
+    <>
+      <TaskProvider>
+        <Navbar />
+        <TaskManager />
+      </TaskProvider>
+    </>
   )
 }
 
