@@ -32,7 +32,6 @@ We may also have some time left over to explore other React adjacent topics that
    - useReducer
    - useCallback
    - useLayoutEffect
-   - useDebugValue
    - useContext (?)
 
 2. **Custom Hooks**
@@ -59,7 +58,8 @@ We may also have some time left over to explore other React adjacent topics that
 5. **Error Handling and Debugging**
 
    - Logging and instrumentation
-   - Debugging
+   - Debuggin
+   - useDebugValue
    - Error boundaries
 
 6. **React Suspense and Concurrent Mode**

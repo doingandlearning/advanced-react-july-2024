@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 function TaskInput({ onAddTask }: { onAddTask: (task: string) => void }) {
 	const inputRef = useRef<null | HTMLInputElement>(null);
 
-	console.log(typeof onAddTask)
 	React.useEffect(() => {
 		inputRef.current!.focus();
 	}, []);
@@ -12,7 +11,6 @@ function TaskInput({ onAddTask }: { onAddTask: (task: string) => void }) {
 		if (!inputRef.current) {
 			return
 		}
-		console.log(onAddTask)
 		onAddTask(inputRef.current.value)
 		if (inputRef.current.value.trim() !== "") {
 			inputRef.current.value = '';
