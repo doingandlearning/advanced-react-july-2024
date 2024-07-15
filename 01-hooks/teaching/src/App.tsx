@@ -1,5 +1,5 @@
 import './App.css'
-import InputComponent from "./components/InputComponent.jsx"
+import InputComponent from "./components/InputComponent.tsx"
 
 function App() {
 
