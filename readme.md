@@ -33,6 +33,7 @@ We may also have some time left over to explore other React adjacent topics that
    - useCallback
    - useLayoutEffect
    - useDebugValue
+   - useContext (?)
 
 2. **Custom Hooks**
 
@@ -72,10 +73,11 @@ We may also have some time left over to explore other React adjacent topics that
    - The continued rise of the framework
    - React Server Components
    - useFormStatus
+   - useOptimisic
 
 x. **Optional Topics**
 
 - Accessibility best practices
 - Server-Side Rendering (SSR) with Next.js
-- TypeScript with React
+- ~~TypeScript with React~~
 - Introduction to React Native
