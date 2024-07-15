@@ -1,0 +1,36 @@
+/* LongList.css */
+.list-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.beer-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.beer-image-container img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.beer-text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.beer-text-container h2,
+.beer-text-container h3,
+.beer-text-container p {
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
