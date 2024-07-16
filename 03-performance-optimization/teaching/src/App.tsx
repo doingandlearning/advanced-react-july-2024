@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <button onClick={() => setShow(!show)}>Show component</button>
-      <input type="range" max={10000} min={0} value={value} onChange={e => setValue(e.target.value)} />
+      <input type="range" max={10000} min={0} value={value} onChange={e => setValue(parseInt(e.target.value))} />
       <div>
         <p>Value {value}</p>
         <p>Total: {total}</p>

@@ -6,7 +6,7 @@
   - https://kevincunningham.co.uk
 - Repo link: https://github.com/doingandlearning/advanced-react-july-2024
 - Miro link: https://miro.com/app/board/uXjVKyn-aQw=/?share_link_id=120694585792
-- Feedback link:
+- Feedback link: https://forms.microsoft.com/e/dWnbfW7E94
 
 ## Timings:
 
@@ -54,11 +54,12 @@ We may also have some time left over to explore other React adjacent topics that
    - Using the React testing library
    - Form testing
    - Mocking HTTP requests
+   - Testing hooks
 
 5. **Error Handling and Debugging**
 
    - Logging and instrumentation
-   - Debuggin
+   - Debugging
    - useDebugValue
    - Error boundaries
 
