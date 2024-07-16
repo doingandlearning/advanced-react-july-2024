@@ -55,6 +55,7 @@ We may also have some time left over to explore other React adjacent topics that
    - Form testing
    - Mocking HTTP requests
    - Testing hooks
+   - Testing with Context
 
 5. **Error Handling and Debugging**
 
