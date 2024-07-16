@@ -13,9 +13,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return joke
     ? {
-        description: `Enjoy the "${joke.name}" joke and much more`,
-        title: `"${joke.name}" joke`,
-      }
+      description: `Enjoy the "${joke.name}" joke and much more`,
+      title: `"${joke.name}" joke`,
+    }
     : { description: 'No joke found', title: 'No joke' };
 }
 
