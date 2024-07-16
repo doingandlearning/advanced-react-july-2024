@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useTheme } from '../../context/ThemeContext';
 
 function GreetingInput() {
 	const [name, setName] = useState('');
-
+	const { theme, toggleTheme } = useTheme()
 	return (
 		<div>
 			<input
@@ -13,6 +14,8 @@ function GreetingInput() {
 
 			/>
 			<p>{name ? `Hello, ${name}!` : 'Please enter your name'}</p>
+			<p>{theme}</p>
+			<p><button onClick={() => toggleTheme()}>toggle</button></p>
 		</div>
 	);
 }

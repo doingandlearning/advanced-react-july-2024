@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useFetch hook > it errors when the fetch is unsuccessful 1`] = `[Error: We had a problem getting the data.]`;
